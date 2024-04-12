@@ -1325,31 +1325,9 @@ local function on_disable()
     joker.remove("j_firecrackers_arachnei")
 end
 
-local function on_key_pressed(key_name)
-    if key_name == "left" then
-        local joker_id = "j_caishen_arachnei"
-        local c1 = create_card("Joker", G.jokers, nil, 1, true, false, joker_id, nil)
-        c1.area = G.jokers
-        G.E_MANAGER:add_event(Event({
-            trigger = 'after',
-            delay = 0.1,
-            func = function()
-            c1.area:remove_card(c1)
-            c1:add_to_deck()
-            G.jokers:emplace(c1)
-
-            G.CONTROLLER:save_cardarea_focus('jokers')
-            G.CONTROLLER:recall_cardarea_focus('jokers')
-            return true
-            end
-        }))
-    end
-end
-
 
 return {
     on_enable = on_enable,
     on_disable = on_disable,
-    on_key_pressed = on_key_pressed,
 }
 
