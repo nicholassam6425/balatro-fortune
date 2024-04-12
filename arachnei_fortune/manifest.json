@@ -1,7 +1,7 @@
 {
     "id": "arachnei_fortune",
     "name": "Fortune Tree",
-    "version": "0.5.0",
+    "version": "0.8.0",
     "author": "arachnei",
     "description": ["adds The Fortune Tree"],
     "load_before": [],
